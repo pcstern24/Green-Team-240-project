@@ -3,7 +3,7 @@ public class Weather {
     private String condition;
 
     public Weather() {
-        this.condition = "Sunny";
+        this.condition = " Sunny ";
     }
 
     public String getCondition() {
