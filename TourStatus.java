@@ -20,6 +20,7 @@ public class TourStatus {
         backpack = new ArrayList<>();
         weather = new Weather();
         clock = new InGameClock();
+        distance = new Distance();
     }
     
     /** The single instance of TourStatus */
