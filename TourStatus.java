@@ -19,7 +19,7 @@ public class TourStatus {
     private TourStatus() {
         backpack = new ArrayList<>();
         weather = new Weather();
-        clock = new InGameClock();
+        clock = new InGameClock(8, 00);
         distance = new Distance();
     }
     

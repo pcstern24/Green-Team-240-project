@@ -2,15 +2,28 @@ public class InGameClock {
     
     private String time;
 
-    public InGameClock() {
-        this.time = "8:00";
+    public InGameClock(int hour, int minutes) {
+        this.time = String.format("%02d:%02d", hour, minutes);
     }
 
     public String getTime() {
-        return time;
+        return time.toString();
     }
 
     public void setTime(String t) {
         this.time = t;    
+    }
+
+    public void addTime(int minsAdded) {
+        String[] parts = time.split(":");
+        int hour = Integer.parseInt(parts[0]);
+        int minute = Integer.parseInt(parts[1]);
+
+        minute += minsAdded;
+        hour += minute / 60;
+        minute = minute % 60;
+        hour = hour % 24;
+
+        this.time = String.format("%02d:%02d", hour, minute);
     }
 } 

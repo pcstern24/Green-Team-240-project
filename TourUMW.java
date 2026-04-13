@@ -68,7 +68,7 @@ public class TourUMW {
                 return new BackpackCommand();
             case "distance": 
                 return new DistanceCommand();
-            case "clock":
+            case "clock": case "time":
                 return new ClockCommand();
             case "weather":
                 return new WeatherCommand();    

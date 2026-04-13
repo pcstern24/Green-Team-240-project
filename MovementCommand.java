@@ -31,7 +31,8 @@ public class MovementCommand implements UserInputCommand {
         }
 
         status.setCurrentLocation(chosenDoor.getEntering());
-        status.getDistance().addDistance();    
+        status.getDistance().addDistance(); 
+        status.getClock().addTime(15);   
         return ""; 
     }
 }
