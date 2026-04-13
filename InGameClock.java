@@ -26,4 +26,14 @@ public class InGameClock {
 
         this.time = String.format("%02d:%02d", hour, minute);
     }
+
+    public int getHour() {
+        String[] parts = time.split(":");
+        return Integer.parseInt(parts[0]);
+    }
+
+    public int getMinute() {
+        String[] parts = time.split(":");
+        return Integer.parseInt(parts[1]);
+    }
 } 
