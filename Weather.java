@@ -31,4 +31,24 @@ public class Weather {
             condition = conditions.get(rand.nextInt(conditions.size()));
         }
     }
+
+    public String getWeatherMessage() {
+
+        switch (condition) {
+            case "Sunny":
+                return "the sun is shining brightly. It's a perfect day to travel.";
+
+            case "Cloudy":
+                return "clouds fill the sky, but the journey continues smoothly.";
+
+            case "Rainy":
+                return "rain begins to fall. The path ahead is slippery and slow.";
+
+            case "Snowy":
+                return "snow covers the ground. Travel becomes cold and difficult.";
+
+            default:
+                return "The weather is unpredictable today.";
+        }
+    }
 }
