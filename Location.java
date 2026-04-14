@@ -150,12 +150,7 @@ public class Location {
       * @param item item to be removed
       */
     public void removeItem(Item item) {
-        for (int i = 0; i < items.size(); i++) {
-            if (items.get(i).getName().equalsIgnoreCase(name)) {
-                items.remove(i);
-                return;
-            }
-        }
+        items.removeIf(i -> i.getName().equalsIgnoreCase(item.getName()));        
     }
 
     /** Returns item with the given name

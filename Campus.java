@@ -15,6 +15,7 @@ public class Campus {
 
     private String campusName;
     private Hashtable<String, Location> locations;
+    private Hashtable<String, Item> allItems;
     private Location startingLocation;
     private String filename;
     /** Constructs an empty Campus. */
@@ -27,6 +28,7 @@ public class Campus {
     public Campus(String name) {
         this.filename = name;
         locations = new Hashtable<>();
+        allItems = new Hashtable<>();
     }
     /** Adds a location to the Campus. 
      * @param location Location to add
@@ -84,6 +86,11 @@ public class Campus {
 
         return values.nextElement();
     }
+    
+    public Item getItemByName(String name) {
+        return allItems.get(name.toLowerCase());
+    }
+
 
     /** Sets the filename 
      * @param f the name of the file being passed
@@ -161,6 +168,8 @@ public class Campus {
 
             Item item = new Item(itemName, "");
 
+            allItems.put(itemName.toLowerCase(), item);
+            
             while (!(line = stdin.nextLine()).equals("+++")) {
                 if (line.contains(":")) {
 

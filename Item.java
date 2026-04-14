@@ -77,4 +77,10 @@ public class Item {
     public String getTarget(String command) {
         return commandTargets.get(command);
     }
+
+    public void copyCommandsFrom(Item other) {
+        this.commandMessages.putAll(other.commandMessages);
+        this.commandActions.putAll(other.commandActions);
+        this.commandTargets.putAll(other.commandTargets);
+    }
 }

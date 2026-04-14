@@ -39,7 +39,16 @@ private String command;
                     current.removeItem(item);
 
                     if (target != null) {
-                        current.addItem(new Item(target, "A newly transformed item."));
+                        Item template = status.getCampus().getItemByName(target);
+
+                        if (template != null) {
+
+                            Item newItem = new Item(template.getName(), template.getMessage());
+
+                            newItem.copyCommandsFrom(template);
+
+                            current.addItem(newItem);
+                        }
                     }
                     break;
 
@@ -50,9 +59,13 @@ private String command;
 
                 case "Teleport":
                     Location random = status.getCampus().getRandomLocation();
-                    status.setCurrentLocation(random);
+                    
+                    if (random != null) {
 
-                    result += "\nYou have been teleported to " + random.getName();
+                        status.setCurrentLocation(random);
+
+                        result += "\nYou have been teleported to " + random.getName();
+                    }
                     break;
             }
         }
