@@ -73,6 +73,9 @@ public class TourUMW {
             case "weather":
                 return new WeatherCommand();    
             default:
+                if (argument != null) {
+                    return new ItemCommand(command, argument);
+                }
                 return new InvalidCommand(input);
         }
     }

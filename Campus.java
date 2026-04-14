@@ -1,7 +1,10 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.util.ArrayList;
 import java.util.Hashtable;
+import java.util.Random;
+import java.util.Enumeration;
 /**
   * The Campus class stores all locations
   * and loads the campus map from a file.
@@ -62,6 +65,26 @@ public class Campus {
     public Location getStartingLocation() {
         return startingLocation;
     }
+    
+    public Location getRandomLocation() {
+    
+        if (locations == null || locations.isEmpty()) {
+            return null;
+        }
+
+        Random rand = new Random();
+
+        Enumeration<Location> values = locations.elements();
+
+        int index = rand.nextInt(locations.size());
+
+        for (int i = 0; i < index; i++) {
+            values.nextElement();
+        }
+
+        return values.nextElement();
+    }
+
     /** Sets the filename 
      * @param f the name of the file being passed
      */
@@ -136,14 +159,45 @@ public class Campus {
             String itemName = line;
             String locName = stdin.nextLine();
 
-            String description = "";
+            Item item = new Item(itemName, "");
+
             while (!(line = stdin.nextLine()).equals("+++")) {
-                description += line + "\n";
+                if (line.contains(":")) {
+
+                    String[] parts = line.split(":");
+                    String left = parts[0];
+                    String message = parts[1];
+
+                    String command;
+                    String action = null;
+                    String target = null;
+
+                    if (left.contains("[")) {
+                        command = left.substring(0, left.indexOf("["));
+
+                        String inside = left.substring(left.indexOf("[") + 1, left.indexOf("]"));
+
+                        if (inside.contains("(")) {
+                            action = inside.substring(0, inside.indexOf("("));
+                            target = inside.substring(inside.indexOf("(") + 1, inside.indexOf(")"));
+                        } else {
+                            action = inside;
+                        }
+                    } else {
+                        command = left;
+                    }
+
+                    item.addCommand(command, action, target, message);
+                } else {
+                    item.setMessage(item.getMessage() + line + "\n");
+                }
             }
 
+            item.setMessage(item.getMessage().trim());
+
             Location loc = getLocation(locName);
-            if (loc != null) {
-                loc.addItem(new Item(itemName, description.trim()));
+            if (loc != null && !locName.equals("none")) {
+                loc.addItem(item);
             }
         }
 

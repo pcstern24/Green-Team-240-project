@@ -31,9 +31,10 @@ Campus Walk West
 This is the main thoroughfare for the west side of campus.
 +++
 For Five Coffee
-Located across from the HCC, For Five Coffee comes to UMW from New York.
-They
-offer coffees, teas, and a selection of sandwiches and pastries.
+Located in the HCC, For Five Coffee will be offering sustainably
+sourced, locally roasted coffees, organic loose-leaf teas, and
+a plant-forward vegetarian and wellness-centered menu that
+includes gluten-free selections.
 +++
 Lee Hall
 Lee Hall houses the bookstore, student services and the health center.
@@ -162,15 +163,24 @@ Items:
 coffee
 For Five Coffee
 The latte of the day is a black raspberry mocha.
+drink[Transform(emptyCoffee)]:Ahhhh
 +++
-Donut
+emptyCoffee
+none
+drink:You already enjoyed this coffee
+refill[Transform(coffee)]:More caffeine coming up
+recycle[Disappear]:Thank you for helping the environment!
++++
+Pop Tart
 For Five Coffee
-Freshly made by local Freddy Donuts!
+Freshly made by Kickshaws. Vegan and gluten free!
+eat[Disappear]:Yummy!
 +++
 The Design of Everyday Things book
 Simpson Library
 The science of quality product design, why do we love some products, but
 are frustrated by others?
+read:Get your great mind working
 +++
 UMW baseball hat
 Bookstore
@@ -188,8 +198,9 @@ Linux laptop
 James Farmer Hall
 You can loan a linux laptop for your assignment this semester, and return
 it once you are done.
+open[Teleport]:Magically things can happen
 +++
-Scone
+scone
 For Five Coffee
 Today we are serving chocolate chip scones!
 +++
