@@ -97,7 +97,7 @@ public class Location {
       */
     public String describeLocation() {
         String result = "You are at: " + name + "\n";
-        
+
         if (!haveVisited) {
             result += description + "\n";
             haveVisited = true;
@@ -123,8 +123,12 @@ public class Location {
     }
     /** Attempts to enter a room. */
     public void enter() { 
-    
+
         if (!haveVisited) {
+            if (isOutside) {
+                System.out.println(description + "Additionally this is an Outdoor location! ");
+            haveVisited = true;
+            } else {
             System.out.println(description);
             haveVisited = true;
         } else {
@@ -132,7 +136,7 @@ public class Location {
         }
     }
 
-    /** Adds a door to a locaiton 
+    /** Adds a door to a location
      * @param door door to add
      */
     public void addDoor(Door door) {

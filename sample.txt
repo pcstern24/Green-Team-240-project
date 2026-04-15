@@ -60,6 +60,11 @@ then had space for many student amenities including study spaces
 and larger book collections. If you need a quiet working space, visit
 the treehouses on the third floor!
 +++
+Amphitheater
+A historic, 1,600 person capacity outdoor venue built in 1923,
+it features a crescent-shaped stage, Greek Doric columns, and tiered bench seating,
+hosting concerts, graduations, and theatrical events after a major 2018 restoration!
++++
 *****
 Doors:
 Double Drive
@@ -101,6 +106,14 @@ James Farmer Hall
 James Farmer Hall
 s
 Campus Walk East
++++
+James Farmer Hall
+n
+Amphitheater
++++
+Amphitheater
+s
+James Farmer Hall
 +++
 Campus Walk East
 w
@@ -185,6 +198,10 @@ read:Get your great mind working
 UMW baseball hat
 Bookstore
 Show that school spirit!
++++
+Key
+Amphitheater
+This key unlocks the locked doors as long as you have it in your Backpack!
 +++
 UMW hoodie
 Bookstore
