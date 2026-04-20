@@ -8,5 +8,4 @@ public class OutsideLocation extends Location {
     public boolean getBench(){
         return hasBench;
     }
-    public boolean
 }

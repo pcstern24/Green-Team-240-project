@@ -127,9 +127,9 @@ public class Location {
         if (!haveVisited) {
             if (isOutside) {
                 System.out.println(description + "Additionally this is an Outdoor location! ");
-            haveVisited = true;
             } else {
-            System.out.println(description);
+                System.out.println(description);
+            }
             haveVisited = true;
         } else {
             System.out.println(name);
