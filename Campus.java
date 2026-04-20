@@ -1,10 +1,16 @@
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
-import java.util.ArrayList;
-import java.util.Hashtable;
-import java.util.Random;
-import java.util.Enumeration;
+import java.io.*;
+import java.util.*;
+
+/**contains:
+  *import java.io.File;
+  *import java.io.FileNotFoundException;
+  *import java.util.Scanner;
+  *import java.util.ArrayList;
+  *import java.util.Hashtable;
+  *import java.util.Random;
+  *import java.util.Enumeration;
+*/
+
 /**
   * The Campus class stores all locations
   * and loads the campus map from a file.
