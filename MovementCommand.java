@@ -30,6 +30,10 @@ public class MovementCommand implements UserInputCommand {
             return "You cannot go that way";
         }
 
+        if (chosenDoor.isLocked() && !status.hasKey()) {
+    return "~ That door is locked. Go find the key, pick it up, and come back.";
+        }
+
         status.setCurrentLocation(chosenDoor.getEntering());
         status.getDistance().addDistance(); 
         status.getClock().addTime(15);   

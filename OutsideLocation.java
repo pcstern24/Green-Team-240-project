@@ -1,4 +1,4 @@
-public class OutsideLocation extends Location {
+/* public class OutsideLocation extends Location {
     private boolean hasBench;
 
     public OutsideLocation(String name, String desc, boolean hasBench) {
@@ -10,3 +10,5 @@ public class OutsideLocation extends Location {
     }
     public boolean
 }
+
+ */

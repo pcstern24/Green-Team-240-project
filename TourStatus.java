@@ -133,10 +133,19 @@ public class TourStatus {
         }
         return item;
     }
-
     /** Lists all items in backpack
       * @return a list of all the items in backpack
       */
+
+    public boolean hasKey(){
+        for (Item item : backpack) {
+            if (item.getName().equalsIgnoreCase("Key")) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public String listBackpackItems() {
         String result = "";
         for (Item i : backpack) {

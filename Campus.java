@@ -124,12 +124,16 @@ public class Campus {
             
             String locName = line;
             String description = "";
+            boolean outside = false;
 
             while (!(line = stdin.nextLine()).equals("+++")) {
-                description += line + "\n";
+                if (line.equalsIgnoreCase("outside")) {
+                    outside = true;
+                } else {
+                    description += line + "\n";
+                }
             }
-            
-            addLocation(new Location(locName, description.trim()));
+            addLocation(new Location(locName, description.trim(), outside));
         } 
        
         stdin.nextLine();        
