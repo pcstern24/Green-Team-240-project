@@ -13,28 +13,24 @@ public class Location {
     private Boolean haveVisited;
     private ArrayList<Door> doors;
     private ArrayList<Item> items;
-    private boolean outside;
-
     /** Constructs a new location. */
     public Location() {
         this.name = name;
         this.description = ""; 
         this.haveVisited = false;
         doors = new ArrayList<>();
-        this.outside = outside;
     
     }
     /** Constructs a new location. 
      * @param name name of the Location
      * @param description text description of the Location
      */
-    public Location(String name, String desc, boolean outside) {
+    public Location(String name, String desc) {
         this.name = name;
         this.description = desc;
         this.haveVisited = false;
         this.doors = new ArrayList<>();
         this.items = new ArrayList<>();
-        this.outside=outside;
     }
     /** Returns location name. 
      * @return Location name
@@ -87,11 +83,6 @@ public class Location {
     /** Returns a formatted list of Doors.
      * @return string describing all exits 
      */
-    public boolean isOutside() { return outside; }
-
-    public void setOutside(boolean outside) {
-        this.outside = outside;
-    }
     public String describeDoors() {
         String result = "";
         for (Door d : doors) {
@@ -109,9 +100,6 @@ public class Location {
 
         if (!haveVisited) {
             result += description + "\n";
-            if (outside) {
-                result += "You are at an Outside Location!\n" ;
-            }
             haveVisited = true;
         }
 
@@ -134,12 +122,14 @@ public class Location {
         return null;
     }
     /** Attempts to enter a room. */
-    public void enter() {
+    public void enter() { 
+
         if (!haveVisited) {
+            if (isOutside) {
+                System.out.println(description + "Additionally this is an Outdoor location! ");
+            haveVisited = true;
+            } else {
             System.out.println(description);
-            if (outside) {
-                System.out.println("This is an outdoor location!");
-            }
             haveVisited = true;
         } else {
             System.out.println(name);
