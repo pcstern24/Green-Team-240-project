@@ -67,7 +67,10 @@ public class Campus {
     public Location getStartingLocation() {
         return startingLocation;
     }
-    
+   
+    /** Generates a random location to send the user after teleporting
+      * @return the new Location that the user is in
+      */
     public Location getRandomLocation() {
     
         if (locations == null || locations.isEmpty()) {
@@ -87,6 +90,10 @@ public class Campus {
         return values.nextElement();
     }
     
+    /** Returns the item name if it exists in list  
+      * @param name item name
+      * @return the item by name
+      */
     public Item getItemByName(String name) {
         return allItems.get(name.toLowerCase());
     }
@@ -214,4 +221,3 @@ public class Campus {
 
     }
 }
-
