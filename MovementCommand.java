@@ -29,11 +29,11 @@ public class MovementCommand implements UserInputCommand {
         if (chosenDoor == null) {
             return "You cannot go that way";
         }
-
-        if (chosenDoor.isLocked() && !status.hasKey()) {
-    return "~ That door is locked. Go find the key, pick it up, and come back.";
+//
+        if (current.getName().equalsIgnoreCase("Double Drive") && dir.equalsIgnoreCase("w") && !status.hasKey()) {
+            return " ~ Door is Locked, Find the key and pick it up to unlock. ~ ";
         }
-
+//
         status.setCurrentLocation(chosenDoor.getEntering());
         status.getDistance().addDistance(); 
         status.getClock().addTime(15);   

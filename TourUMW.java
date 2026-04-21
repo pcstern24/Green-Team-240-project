@@ -27,6 +27,7 @@ public class TourUMW {
             String input = stdin.nextLine();
 
             if (input.equalsIgnoreCase("q")) {
+               //This is where we will add the option to save?
                 break;
             }
                 
