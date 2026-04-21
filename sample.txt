@@ -12,6 +12,7 @@ Education and Asian Studies. It was built in 1941 and was
 originally the library. An addition was completed in 1963.
 +++
 Campus Walk East
+outside
 This sidewalk winds through the entire campus leading
 you to all other locations on campus.
 +++
@@ -28,6 +29,7 @@ Combs Hall contains the Department of English and Linguistics.
 It was built in 1959.
 +++
 Campus Walk West
+outside
 This is the main thoroughfare for the west side of campus.
 +++
 For Five Coffee
@@ -49,6 +51,7 @@ built in 1911. It houses the History, Geography, and Political
 Science Departments.
 +++
 Monroe Fountain
+outside
 This fountain is central to the original three buildings of campus.
 Many students enjoy a refreshing feet dip in spring. You never
 know what you might find walking by...towering bubbles?

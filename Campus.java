@@ -162,7 +162,7 @@ public class Campus {
             Location to = getLocation(toName);
 
             if (from != null && to != null) {
-                Door d = (new Door(dir, from, to));
+                Door d = (new Door(dir, from, to, false));
                 from.addDoor(d);
             }
         } 

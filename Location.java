@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 /**
-  * The Location class represents a place on campus
-  * It has a name, description, door, and tracks
-  * if it has been previously visited
-  * @author Patrick Stern
-  * @version 23.02.2026
-  */
+ * The Location class represents a place on campus
+ * It has a name, description, door, and tracks
+ * if it has been previously visited
+ * @author Patrick Stern
+ * @version 23.02.2026
+ */
 public class Location {
 
     private String name;
@@ -13,32 +13,36 @@ public class Location {
     private Boolean haveVisited;
     private ArrayList<Door> doors;
     private ArrayList<Item> items;
+    private boolean outside;
+
     /** Constructs a new location. */
     public Location() {
         this.name = name;
-        this.description = ""; 
+        this.description = "";
         this.haveVisited = false;
         doors = new ArrayList<>();
-    
+        this.outside = outside;
+
     }
-    /** Constructs a new location. 
+    /** Constructs a new location.
      * @param name name of the Location
      * @param description text description of the Location
      */
-    public Location(String name, String desc) {
+    public Location(String name, String desc, boolean outside) {
         this.name = name;
         this.description = desc;
         this.haveVisited = false;
         this.doors = new ArrayList<>();
         this.items = new ArrayList<>();
+        this.outside=outside;
     }
-    /** Returns location name. 
+    /** Returns location name.
      * @return Location name
      */
     public String getName() {
         return name;
     }
-    /** Returns a description. 
+    /** Returns a description.
      * @return description text
      */
     public String getDescription() {
@@ -48,21 +52,21 @@ public class Location {
      * @return true if visited
      */
     public boolean getHaveVisited() {
-        return haveVisited;    
+        return haveVisited;
     }
     /** Returns a list of doors for a location
-      * @return ArrayList of doors
-      */
+     * @return ArrayList of doors
+     */
     public ArrayList<Door> getDoors() {
         return doors;
     }
     /** Returns a list of items for a location
-      * @return ArrayList of items
-      */
+     * @return ArrayList of items
+     */
     public ArrayList<Item> getItems() {
         return items;
     }
-    /** Sets the name of a Location. 
+    /** Sets the name of a Location.
      * @param n name of Location
      */
     public void setName(String n) {
@@ -74,15 +78,20 @@ public class Location {
     public void setDescription(String d) {
         this.description = d;
     }
-    /** Sets if a Location has been visited. 
+    /** Sets if a Location has been visited.
      * @param v truth statement of if a Room has been visited
      */
     public void setHaveVisited(boolean v) {
         this.haveVisited = v;
     }
     /** Returns a formatted list of Doors.
-     * @return string describing all exits 
+     * @return string describing all exits
      */
+    public boolean isOutside() { return outside; }
+
+    public void setOutside(boolean outside) {
+        this.outside = outside;
+    }
     public String describeDoors() {
         String result = "";
         for (Door d : doors) {
@@ -92,27 +101,30 @@ public class Location {
     }
 
     /** Returns a full description of the location including name,
-      * description, available doors, and items present    
-      * @return a formatted description of the location
-      */
+     * description, available doors, and items present
+     * @return a formatted description of the location
+     */
     public String describeLocation() {
         String result = "You are at: " + name + "\n";
 
         if (!haveVisited) {
             result += description + "\n";
+            if (outside) {
+                result += " ~You are at an Outside Location!~ \n";
+            }
             haveVisited = true;
         }
 
         result += "Doors:\n" + describeDoors();
         result += "Items:\n" + getItemsInLocation();
-    
+
         return result;
     }
 
-    /** Attempts to leave in a direction. 
+    /** Attempts to leave in a direction.
      * @param dir direction entered by user
-     * @return destination if valid, otherwise null 
-     */ 
+     * @return destination if valid, otherwise null
+     */
     public Location leaveLocation(String dir) {
         for (Door d : doors) {
             if (d.getDirection().equalsIgnoreCase(dir)) {
@@ -122,14 +134,12 @@ public class Location {
         return null;
     }
     /** Attempts to enter a room. */
-    public void enter() { 
-
+    public void enter() {
         if (!haveVisited) {
-            if (isOutside) {
-                System.out.println(description + "Additionally this is an Outdoor location! ");
-            haveVisited = true;
-            } else {
             System.out.println(description);
+            if (outside) {
+                System.out.println("This is an outdoor location!");
+            }
             haveVisited = true;
         } else {
             System.out.println(name);
@@ -142,25 +152,25 @@ public class Location {
     public void addDoor(Door door) {
         doors.add(door);
     }
-    
+
     /** Adds an item to backpack
-      * @param item item to add
-      */
+     * @param item item to add
+     */
     public void addItem(Item item) {
         this.items.add(item);
     }
 
     /** Removes an item from backpack
-      * @param item item to be removed
-      */
+     * @param item item to be removed
+     */
     public void removeItem(Item item) {
-        items.removeIf(i -> i.getName().equalsIgnoreCase(item.getName()));        
+        items.removeIf(i -> i.getName().equalsIgnoreCase(item.getName()));
     }
 
     /** Returns item with the given name
-      * @param name name of item 
-      * @return the matching item, or null if not found
-      */
+     * @param name name of item
+     * @return the matching item, or null if not found
+     */
     public Item getItemNamed(String name) {
         for (Item i: items) {
             if (i.getName().equalsIgnoreCase(name)) {
@@ -169,15 +179,15 @@ public class Location {
         }
         return null;
     }
-    
+
     /** Returns a list of item names in this location
-      * @return a seperated list of all the items
-      */
+     * @return a seperated list of all the items
+     */
     public String getItemsInLocation() {
         String result = "";
         for (Item i : items) {
             result += i.getName() + "\n";
-        } 
+        }
         return result;
     }
 }
