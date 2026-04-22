@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class TourUMW {
     /** Main for running the program. 
      * @param args command-line arguments
-     * @throws Exceptin if Campus file fails to load
+     * @throws Exception if Campus file fails to load
      */
     public static void main(String[] args) throws Exception {
         Scanner stdin = new Scanner(System.in);
