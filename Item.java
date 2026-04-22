@@ -19,7 +19,7 @@ public class Item {
         commandTargets = new HashMap<>();
     }
     
-    /** Constructs an item with with a name and description 
+    /** Constructs an item with a name and description 
      * @param n the name of the item
      * @param m the description message of the item
      */

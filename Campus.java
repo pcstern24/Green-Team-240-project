@@ -63,7 +63,7 @@ public class Campus {
         startingLocation = start;
     }
     /** Returns the starting Location 
-     * @return the starting Locaiton on Campus
+     * @return the starting Location on Campus
      */
     public Location getStartingLocation() {
         return startingLocation;

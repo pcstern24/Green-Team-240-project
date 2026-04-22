@@ -3,7 +3,7 @@ public class ClockCommand implements UserInputCommand {
 
 
 
-    /** Exectus a clock command
+    /** Executes a clock command
       * @return The current in-game time
       */
     public String carryOut() {

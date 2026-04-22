@@ -1,10 +1,11 @@
-/** InGameClock keeos track of the current time */
+/** InGameClock keeps track of the current time */
 public class InGameClock {
     
     private String time;
     
     /** Constructor for in game clock that sets the starting time to 8:00
-      *
+      * @param hour the hour
+      * @param minutes the minute
       */
     public InGameClock(int hour, int minutes) {
         this.time = String.format("%02d:%02d", hour, minutes);
@@ -17,14 +18,14 @@ public class InGameClock {
     }
     
     /** Sets the current time for the tour
-      *
+      * @param t the time to be set
       */
     public void setTime(String t) {
         this.time = t;    
     }
 
     /** Increments the time whena user does an action
-      *
+      * @param minsAdded the amount of minutes to be added to clock
       */
     public void addTime(int minsAdded) {
         String[] parts = time.split(":");

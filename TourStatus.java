@@ -86,8 +86,8 @@ public class TourStatus {
     }
 
     /** Updates the tour location 
-     * @param dir direciton entered by user
-     * @return an error message if user goes in a void direcion
+     * @param dir direction entered by user
+     * @return an error message if user goes in a void direction
      */
     public Location updateTourLocation(String dir) {
         
@@ -134,6 +134,10 @@ public class TourStatus {
         }
         return item;
     }
+    
+    /** Determines if the user has a key in their backpack
+      * @return if the user has a key it returns true if not it returns false
+      */
 
     public boolean hasKey(){
         for (Item item : backpack) {
@@ -144,7 +148,7 @@ public class TourStatus {
         return false;
     }
 
-    /** Lisrs all items in backpack
+    /** Lists all items in backpack
       * @return a list of all items in backpack
       */
 

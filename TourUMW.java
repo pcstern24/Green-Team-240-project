@@ -25,7 +25,6 @@ public class TourUMW {
             String input = stdin.nextLine();
 
             if (input.equalsIgnoreCase("q")) {
-               //This is where we will add the option to save?
                 break;
             }
                 
@@ -38,7 +37,7 @@ public class TourUMW {
         }
     }
 
-    /** Parses user input and returns the appropiate command object
+    /** Parses user input and returns the appropriate command object
       * @param input the user input string
       * @return a UserInputCommand object
       */

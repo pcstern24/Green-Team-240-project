@@ -1,5 +1,5 @@
 /**
-  * The Door class is a connection between two locaitons
+  * The Door class is a connection between two locations
   * It has a leaving and entering direction 
   * @author Patrick Stern
   * @version 23.02.2026
@@ -16,7 +16,7 @@ public class Door {
         locked = false;
     }
     /** Constructs a Door connecting two locations. 
-     * @param dir direciton of travel (n,s,e,w)
+     * @param dir direction of travel (n,s,e,w)
      * @param leave the location being exited
      * @param enter the destination location   
      */
@@ -37,7 +37,7 @@ public class Door {
         return r;
     }
 
-    /** Returns starting loaction.
+    /** Returns starting location.
      * @return leaving Location
      */
     public Location getLeaving() {
@@ -50,18 +50,18 @@ public class Door {
         return enteringLocation;
     }
     /** Returns direction of the door. 
-     * @return direciton string
+     * @return direction string
      */
     public String getDirection() {
         return direction;
     }
-    /** Sets levaing location. 
+    /** Sets leaving location. 
      * @param leave new leaving Location
      */
     public void setLeaving(Location leave) {
         this.leavingLocation = leave;
     }
-    /** Sets entering loacation. 
+    /** Sets entering location. 
      * @param enter new entering Location
      */
     public void setEntering(Location enter) {

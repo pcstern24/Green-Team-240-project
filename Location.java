@@ -96,7 +96,7 @@ public class Location {
         this.outside = outside;
     }
 
-    /** Describes the doors for the current locaiton
+    /** Describes the doors for the current location
       * @return a list of the possible doors that can be entered
       */
 
