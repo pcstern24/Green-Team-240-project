@@ -2,6 +2,9 @@
 
 public class DistanceCommand implements UserInputCommand {
 
+    /** Executes the distance command and returns the total distance.
+     * @return returns the current distance and title to user.
+     */
     public String carryOut() {
         TourStatus status = TourStatus.getInstance();
         int distance = status.getDistance().getDistance();

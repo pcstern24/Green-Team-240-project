@@ -1,13 +1,23 @@
+/** ItemCommand class pairs a command with an item */
 public class ItemCommand implements UserInputCommand {
 
 private String command;
     private String itemName;
+
+    /** Constructor for ItemCommand
+      * @param command the command for a given item
+      * @param itemName the name of the item
+      */
 
     public ItemCommand(String command, String itemName) {
         this.command = command;
         this.itemName = itemName;
     }
 
+    /** This method executes a given item command
+      * @return a message giving the status of the item
+      * @return the result of the item command
+      */
     @Override
     public String carryOut() {
 

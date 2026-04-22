@@ -30,6 +30,7 @@ public class TourStatus {
         }
         return theInstance;
     }
+
     /** Sets the campus and initializes start Location. 
      * @param campus Campus being toured
      */
@@ -133,9 +134,6 @@ public class TourStatus {
         }
         return item;
     }
-    /** Lists all items in backpack
-      * @return a list of all the items in backpack
-      */
 
     public boolean hasKey(){
         for (Item item : backpack) {
@@ -145,6 +143,10 @@ public class TourStatus {
         }
         return false;
     }
+
+    /** Lisrs all items in backpack
+      * @return a list of all items in backpack
+      */
 
     public String listBackpackItems() {
         String result = "";

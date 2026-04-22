@@ -89,9 +89,17 @@ public class Location {
      */
     public boolean isOutside() { return outside; }
 
+    /** Sets if a location is outside or not
+      * @param a boolean saying if the location is outside or not
+      */ 
     public void setOutside(boolean outside) {
         this.outside = outside;
     }
+
+    /** Describes the doors for the current locaiton
+      * @return a list of the possible doors that can be entered
+      */
+
     public String describeDoors() {
         String result = "";
         for (Door d : doors) {

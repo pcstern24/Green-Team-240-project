@@ -2,8 +2,6 @@ import java.util.Scanner;
 /** 
   * TourUMW runs the interactive campus tour and
   * handles user input and screen output
-  * @author Patrick Stern
-  * @version 23.02.2026
   */
 public class TourUMW {
     /** Main for running the program. 

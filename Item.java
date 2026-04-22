@@ -59,25 +59,43 @@ public class Item {
     public void setMessage(String msg) {
         message = msg;
     }
-
+    
+    /** Reads the various parts of an item in and puts them into HashMaps
+      *
+      */
     public void addCommand(String command, String action, String target, String msg) {
         commandMessages.put(command, msg);
         commandActions.put(command, action);
         commandTargets.put(command, target);
     }
 
+    /** Returns the command message for a given item
+      * @param command the command that returns a message for it
+      * @return the command message for an item
+      */
     public String getCommandMessage(String command) {
         return commandMessages.get(command);
     }
 
+    /** Returns the action for a certain command
+      * @param command the command that corresponds with the action for that item
+      * @return the command action for an item command
+      */
     public String getAction(String command) {
         return commandActions.get(command);
     }
-
+    
+    /** Returns target item to action on
+      * @param command the command to be used on the target item
+      * @return returns the target of the item command.
+      */
     public String getTarget(String command) {
         return commandTargets.get(command);
     }
 
+    /** Copies all command-related mappings to from one item to another
+      * @param Item whose command mappings will be copied into item
+      */
     public void copyCommandsFrom(Item other) {
         this.commandMessages.putAll(other.commandMessages);
         this.commandActions.putAll(other.commandActions);

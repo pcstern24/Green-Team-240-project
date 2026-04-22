@@ -73,10 +73,15 @@ public class Door {
     public void setDirection(String dir) {
         this.direction = dir;
     }
+    /** Determines if a given door is locked 
+      * @return returns a boolean saying if the door is or isn't locked
+      */
     public boolean isLocked() {
         return locked;
     }
-
+    /** Sets the lock status of the doors 
+      *
+      */ 
     public void setLocked(boolean locked) {
         this.locked = locked;
     }
