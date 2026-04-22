@@ -7,7 +7,6 @@ public class DropCommand implements UserInputCommand {
 
     /** Constructs a DropCommand
       * @param itemName the name of the item to drop
-      * @param status the current tourStaus
       */
     public DropCommand(String itemName) {
         this.itemName = itemName;
@@ -15,6 +14,7 @@ public class DropCommand implements UserInputCommand {
 
     /** Executes the drop command
       * @return a message indicating success or failure
+      * note TourStatus status: holds current tour status
       */
     public String carryOut() {
         TourStatus status = TourStatus.getInstance();
