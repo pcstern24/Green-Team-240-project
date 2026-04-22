@@ -26,7 +26,7 @@ public class Location {
     }
     /** Constructs a new location.
      * @param name name of the Location
-     * @param description text description of the Location
+     * @param desc text description of the Location
      */
     public Location(String name, String desc, boolean outside) {
         this.name = name;
