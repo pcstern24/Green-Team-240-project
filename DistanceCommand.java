@@ -1,3 +1,5 @@
+/** Implements UserInputCommand in order to move the user if they input a distance command */
+
 public class DistanceCommand implements UserInputCommand {
 
     public String carryOut() {
