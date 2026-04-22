@@ -6,7 +6,6 @@ public class PickupCommand implements UserInputCommand {
 
     /** Constructs a PickupCommand
       * @param itemName the name of the item
-      * @param status the current tour status
       */
     public PickupCommand(String itemName) {
         this.itemName = itemName;
@@ -14,6 +13,7 @@ public class PickupCommand implements UserInputCommand {
 
     /** Executes the pickup command 
       * @return a message indicating success or failure
+      * note TourStatus status: holds current tour status
       */
     public String carryOut() {
         TourStatus status = TourStatus.getInstance();
