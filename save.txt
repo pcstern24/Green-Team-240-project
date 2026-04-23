@@ -1,0 +1,61 @@
+SAVE FILE
+*****
+current location: For Five Coffee
+backpack:Little Brother book,scone,
+Location states:
+Amphitheater
+visited: false
+items:Key,
++++
+Campus Walk West
+visited: true
+items:
++++
+Bell Tower
+visited: true
+items:
++++
+George Washington Hall
+visited: false
+items:
++++
+Lee Hall
+visited: false
+items:
++++
+Bookstore
+visited: false
+items:UMW baseball hat,UMW hoodie,
++++
+Double Drive
+visited: true
+items:
++++
+Simpson Library
+visited: true
+items:The Design of Everyday Things book,
++++
+Combs Hall
+visited: false
+items:
++++
+For Five Coffee
+visited: true
+items:coffee,Pop Tart,
++++
+James Farmer Hall
+visited: false
+items:Linux laptop,
++++
+Monroe Fountain
+visited: true
+items:
++++
+Campus Walk East
+visited: true
+items:
++++
+Monroe Hall
+visited: false
+items:
++++

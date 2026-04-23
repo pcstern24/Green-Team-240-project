@@ -5,13 +5,14 @@ import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.Random;
 import java.util.Enumeration;
+import java.util.Collection;
 
 /**
-  * The Campus class stores all locations
-  * and loads the campus map from a file.
-  * @author Patrick Stern
-  * @version 23.02.2026
-  */
+ * The Campus class stores all locations
+ * and loads the campus map from a file.
+ * @author Patrick Stern
+ * @version 23.02.2026
+ */
 public class Campus {
 
     private String campusName;
@@ -31,6 +32,7 @@ public class Campus {
         locations = new Hashtable<>();
         allItems = new Hashtable<>();
     }
+
     /** Adds a location to the Campus. 
      * @param location Location to add
      */
@@ -44,11 +46,16 @@ public class Campus {
     public Location getLocation(String name) {
         return locations.get(name);
     }
+    
+    public Collection<Location> getLocations() {
+        return locations.values();
+    }
+    
     /** Sets the name of Campus. 
      * @param n name of Campus
      */
     public void setCampusName(String n) {
-       campusName = n;
+        campusName = n;
     }
     /** Returns the name of Campus. 
      * @return the name of the desired Campus
@@ -68,12 +75,12 @@ public class Campus {
     public Location getStartingLocation() {
         return startingLocation;
     }
-   
+
     /** Generates a random location to send the user after teleporting
-      * @return the new Location that the user is in
-      */
+     * @return the new Location that the user is in
+     */
     public Location getRandomLocation() {
-    
+
         if (locations == null || locations.isEmpty()) {
             return null;
         }
@@ -90,15 +97,14 @@ public class Campus {
 
         return values.nextElement();
     }
-    
+
     /** Returns the item name if it exists in list  
-      * @param name item name
-      * @return the item by name
-      */
+     * @param name item name
+     * @return the item by name
+     */
     public Item getItemByName(String name) {
         return allItems.get(name.toLowerCase());
     }
-
 
     /** Sets the filename 
      * @param f the name of the file being passed
@@ -129,7 +135,7 @@ public class Campus {
             if (line.equals("*****")) {
                 break;
             }
-            
+
             String locName = line;
             String description = "";
             boolean outside = false;
@@ -143,11 +149,11 @@ public class Campus {
             }
             addLocation(new Location(locName, description.trim(), outside));
         } 
-       
+
         stdin.nextLine();        
-        
+
         while (stdin.hasNextLine()) {
-            
+
             String line = stdin.nextLine().trim();
             if (line.equals("*****")) {
                 break;
@@ -181,7 +187,7 @@ public class Campus {
             Item item = new Item(itemName, "");
 
             allItems.put(itemName.toLowerCase(), item);
-            
+
             while (!(line = stdin.nextLine()).equals("+++")) {
                 if (line.contains(":")) {
 

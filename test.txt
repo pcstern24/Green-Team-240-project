@@ -1,0 +1,61 @@
+SAVE FILE
+*****
+current location: Bookstore
+backpack:UMW hoodie,
+Location states:
+Amphitheater
+visited: false
+items:Key,
++++
+Campus Walk West
+visited: true
+items:
++++
+Bell Tower
+visited: true
+items:
++++
+George Washington Hall
+visited: false
+items:
++++
+Lee Hall
+visited: true
+items:
++++
+Bookstore
+visited: true
+items:UMW baseball hat,
++++
+Double Drive
+visited: true
+items:
++++
+Simpson Library
+visited: false
+items:The Design of Everyday Things book,Little Brother book,
++++
+Combs Hall
+visited: false
+items:
++++
+For Five Coffee
+visited: false
+items:coffee,Pop Tart,scone,
++++
+James Farmer Hall
+visited: false
+items:Linux laptop,
++++
+Monroe Fountain
+visited: false
+items:
++++
+Campus Walk East
+visited: true
+items:
++++
+Monroe Hall
+visited: false
+items:
++++

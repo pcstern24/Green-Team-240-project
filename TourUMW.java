@@ -70,6 +70,12 @@ public class TourUMW {
                 return new ClockCommand();
             case "weather":
                 return new WeatherCommand();    
+            case "save":
+                if (argument != null) return new SaveCommand(argument);
+                return new SaveCommand("save.txt");
+            case "load": 
+                if (argument != null) return new LoadCommand(argument);
+                return new LoadCommand("save.txt");
             default:
                 if (argument != null) {
                     return new ItemCommand(command, argument);
