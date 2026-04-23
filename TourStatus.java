@@ -37,6 +37,9 @@ public class TourStatus {
         return theInstance;
     }
 
+    /** Saves the current state of the game to a .txt file 
+     * @param filename the name of the file to save to
+     */
     public void saveGame(String filename) {
         try (PrintWriter writer = new PrintWriter(new FileWriter(filename))) {
 
@@ -87,6 +90,9 @@ public class TourStatus {
         }
     }
 
+    /** Loads in a .txt save file 
+      * @param filename the name of the file to be loaded in
+      */
     public void loadGame(String filename) {
 
         try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {

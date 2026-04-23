@@ -1,0 +1,36 @@
+John Nett, Patrick Stern, Alyssa Burns
+Professor Zeitz
+CPSC 240
+Apr 22, 2026
+Functionality & Testing
+
+
+Outside Locations: 
+A few of the locations have been marked as outside locations like the amphitheater, fountain, and walkways. To test - walk around campus to East or West walks, or the amphitheater north of farmer hall to get a special message that you are outside!
+
+Locked Doors with Key: 
+George Washington Hall has been Locked with a Key! You must pick it up from a mysterious location (the Amphitheater) in order to be allowed inside. To test go try yourself, the amphitheater is north of farmer hall.
+
+Distance:
+A distance counter has been integrated into the game that counts each step you take, placing you in a special travellers status depending on how far you have gone. To test: just type distance at any time to see how far you have travelled.
+
+Transform:
+If the user drinks a delicious For Five coffee, by typing drink coffee, the coffee will mysteriously turn into an empty coffee cup!  To test: head to For Five and drink a cup with the keyword drink!
+
+Disappear:
+To test: Eating the poptart by typing eat poptart or recycling the empty coffee cup by typing recycle emptyCoffee, will disappear and help the environment! 
+
+Teleport:
+There is a way to teleport on campus! Go to farmer hall and To test: once inside type open Linux laptop to be teleported to a random location!!
+
+Weather:
+Users can check the current weather status anywhere on campus by using the command. Weather dynamically changes by the hour to a random weather pattern! To test: by typing weather. Then you should have a response with today's weather, and what it's a perfect day for!
+
+Clock:
+This functionality works anywhere To test: by typing clock. This response will let you know what time it is so you're not late for anything on campus!
+
+Save:
+This allows you to save anywhere including your current location, items, and which locations have been visited or not. To test: type either save or save plus the desired name of your save file. You’ll receive the message “Game saved to “ plus the file name. (defaults to save.txt if no name is inputted).
+
+Load:
+This feature lets you load in your game state from a save file by typing load and the name of your save file (save.txt for example). You will start from the location you last left off in and your items and visited locations will also be loaded in. You have to already be playing the game using sample.txt to execute this command. 

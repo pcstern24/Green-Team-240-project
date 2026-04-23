@@ -46,7 +46,11 @@ public class Campus {
     public Location getLocation(String name) {
         return locations.get(name);
     }
-    
+   
+    /** Helper function used to go through locations 
+      * for save and load commands
+      * @return the locations in the Hashtable
+      */
     public Collection<Location> getLocations() {
         return locations.values();
     }
